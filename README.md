@@ -1,7 +1,10 @@
-# Matt's rice void (Built from Randi's)
+# Matt's rice void (Built upon Randi's)
+
+Setup my default install (practice on virtualbox)
 
 Install [debian os](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/)
-I used debian 11 version (code name "bullseye")
+
+Debian 11 version (code name "bullseye")
 
 ---
 
@@ -43,7 +46,10 @@ That's it.
 - emacs
 - wireguard
 - joplin
+- Virtualbox
+- gimp
 
 ### Include
 
 - configs for dwm, surf, st, dmenu, autostart
+- Wallpaper image
