@@ -43,3 +43,7 @@ That's it.
 - emacs
 - wireguard
 - joplin
+
+### Include
+
+- configs for dwm, surf, st, dmenu, autostart
