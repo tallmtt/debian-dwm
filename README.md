@@ -1,6 +1,6 @@
-# Rendi's rice void
+# Matt's rice void (Built from Randi's)
 
-Install [debian os](https://www.debian.org/download)
+Install [debian os](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/)
 I used debian 11 version (code name "bullseye")
 
 ---
@@ -22,3 +22,24 @@ Finish the setup
 $ sudo reboot
 ```
 That's it.
+
+## Installs
+
+- File Manager: Ranger
+- ls replaced with exa
+- microcode (intel or amd)
+- Display Manager: Ly Console Manager
+- Window Manager: dwm
+- Terminal: st
+- Menu: dmenu
+- Browser: Firefox 
+- Image browser: feh or nitrogen
+- neofetch 
+- htop
+
+## Add to this:
+
+- Surf
+- emacs
+- wireguard
+- joplin
