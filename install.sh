@@ -47,7 +47,9 @@ sudo apt install -y pandoc
 # Install LibreOffice
 sudo apt install -y libreoffice
 
-# Install 
+# Install hledger
+sudo apt install -y hledger hledger-ui hledger-web
+
 # Install 
 # Install 
 
