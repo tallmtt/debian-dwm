@@ -1,5 +1,7 @@
 # Matt's rice void (Built upon Randi's)
 
+NOTE: This is in progress - use at your own risk!
+
 Setup my default install (practice on virtualbox)
 
 Install [debian os](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/)
