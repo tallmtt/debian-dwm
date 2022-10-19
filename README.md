@@ -48,6 +48,8 @@ That's it.
 - joplin
 - Virtualbox
 - gimp
+- picom
+- pandoc
 
 ### Include
 
