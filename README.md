@@ -13,7 +13,7 @@ My setup is install debian minimal without GUI and used expert method.
 ```bash
 $ sudo apt install git
 
-$ git clone https://github.com/rendiwijiatmoko/debian-dwm
+$ git clone git@github.com:tallmtt/debian-dwm.git
 
 $ cd debian-dwm
 
