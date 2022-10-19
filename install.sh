@@ -22,7 +22,7 @@ sudo apt install -y neofetch htop
 sudo apt install -y exa
 
 # Browser Installation (eg. chromium, firefox-esr)
-# sudo apt install -y firefox-esr 
+sudo apt install -y firefox-esr 
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
