@@ -18,7 +18,7 @@ sudo apt install -y neofetch htop
 
 # EXA installation
 # replace ls command in .bashrc file with line below
-# alias ls='exa -al --long --header --color=always --group-directories-first' 
+# alias ls='exa --header --color=always --group-directories-first'
 sudo apt install -y exa
 
 # Browser Installation (eg. chromium, firefox-esr)
