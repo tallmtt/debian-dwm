@@ -24,6 +24,35 @@ sudo apt install -y exa
 # Browser Installation (eg. chromium, firefox-esr)
 sudo apt install -y firefox-esr 
 
+# Install emacs
+sudo apt install -y emacs
+
+# Install wireguard
+sudo apt install -y wireguard
+
+# Install joplin
+
+# Install Virtualbox
+
+# Install gimp
+sudo apt install -y gimp
+
+# Install picom X-org compositor
+# Use https://wiki.archlinux.org/title/Picom for information on use
+sudo apt install -y picom
+
+# Install pandoc
+sudo apt install -y pandoc
+
+# Install LibreOffice
+sudo apt install -y libreoffice
+
+# Install 
+# Install 
+# Install 
+
+### Dwm stuff
+
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart
@@ -54,6 +83,7 @@ git clone  https://github.com/rendiwijiatmoko/dmenu.git
 cd dwm
 sudo make clean install
 
+# Surf
 
 # Dependencies for Ly Console Manager
 sudo apt install -y libpam0g-dev libxcb-xkb-dev
