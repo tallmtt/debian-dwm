@@ -52,8 +52,9 @@ That's it.
 - gimp
 - picom
 - pandoc
+- neomutt
 
 ### Include
 
-- configs for dwm, surf, st, dmenu, autostart
+- configs for dwm, surf, st, dmenu, autostart, neomutt, wireguard
 - Wallpaper image
