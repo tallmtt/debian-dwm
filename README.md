@@ -53,6 +53,10 @@ That's it.
 - picom
 - pandoc
 - neomutt
+- python stuff (using pipx):
+  - pywal
+  - lektor
+  - jupyter-notebook
 
 ### Include
 
