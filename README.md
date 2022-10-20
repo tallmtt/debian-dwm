@@ -57,6 +57,7 @@ That's it.
   - pywal
   - lektor
   - jupyter-notebook
+- sudo apt install network-manager 
 
 ### Include
 
