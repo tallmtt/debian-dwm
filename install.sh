@@ -65,7 +65,8 @@ sudo apt install -y feh
 cd
 mkdir Downloads
 cd Downloads
-git clone  https://github.com/rendiwijiatmoko/dwm.git
+git clone  git@github.com:tallmtt/MR-dwm.git
+#https://github.com/rendiwijiatmoko/dwm.git
 cd dwm
 sudo make clean install
 
@@ -73,16 +74,18 @@ sudo make clean install
 cd
 mkdir Downloads
 cd Downloads
-git clone  https://github.com/rendiwijiatmoko/st.git
-cd dwm
+git clone git@github.com:tallmtt/MR-st.git
+#https://github.com/rendiwijiatmoko/st.git
+cd st
 sudo make clean install
 
 # Install suckless dmenu - dynamic manu
 cd
 mkdir Downloads
 cd Downloads
-git clone  https://github.com/rendiwijiatmoko/dmenu.git
-cd dwm
+git clone  git@github.com:tallmtt/MR-dmenu.git
+#https://github.com/rendiwijiatmoko/dmenu.git
+cd dmenu
 sudo make clean install
 
 # Surf
