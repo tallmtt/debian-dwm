@@ -96,7 +96,8 @@ sudo apt install -y libpam0g-dev libxcb-xkb-dev
 # Install Ly Console Display Manager
 cd 
 cd Downloads
-git clone --recurse-submodules https://github.com/nullgemm/ly.git
+git clone --recurse-submodules git@github.com:fairyglade/ly.git
+#https://github.com/nullgemm/ly.git
 cd ly/
 make
 sudo make install
