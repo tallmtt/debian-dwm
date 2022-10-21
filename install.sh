@@ -91,7 +91,8 @@ sudo make clean install
 # Surf
 
 # Dependencies for Ly Console Manager
-sudo apt install -y libpam0g-dev libxcb-xkb-dev
+#sudo apt install -y libpam0g-dev libxcb-xkb-dev
+sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
 
 # Install Ly Console Display Manager
 cd 
