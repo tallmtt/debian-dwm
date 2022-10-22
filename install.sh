@@ -55,8 +55,8 @@ sudo apt install -y hledger hledger-ui hledger-web
 
 ### Dwm stuff
 
-# Install dwm requirements
-sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome
+# Install dwm/dmenu/st/slstatus requirements
+sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -94,9 +94,6 @@ sudo make clean install
 # Surf
 
 # Dependencies for Ly Console Manager
-#sudo apt install -y libpam0g-dev libxcb-xkb-dev
-sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
-
 # Install Ly Console Display Manager
 #cd 
 #cd Downloads
