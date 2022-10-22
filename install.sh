@@ -55,6 +55,9 @@ sudo apt install -y hledger hledger-ui hledger-web
 
 ### Dwm stuff
 
+# Install dwm requirements
+sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome
+
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart
