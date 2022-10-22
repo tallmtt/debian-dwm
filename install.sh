@@ -98,14 +98,22 @@ sudo make clean install
 sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
 
 # Install Ly Console Display Manager
-cd 
+#cd 
+#cd Downloads
+#git clone --recurse-submodules git@github.com:fairyglade/ly.git
+##https://github.com/nullgemm/ly.git
+#cd ly/
+#make
+#sudo make install
+#sudo systemctl enable ly
+
+# Install suckless slstatus
+cd
+mkdir Downloads
 cd Downloads
-git clone --recurse-submodules git@github.com:fairyglade/ly.git
-#https://github.com/nullgemm/ly.git
-cd ly/
-make
-sudo make install
-sudo systemctl enable ly
+git clone git://git.suckless.org/slstatus
+cd slstatus
+sudo make clean install
 
 # XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
