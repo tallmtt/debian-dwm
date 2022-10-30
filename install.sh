@@ -2,6 +2,7 @@
 
 # Add a menu of software to include
 ### See: https://gijs-de-jong.nl/posts/pretty-dialog-boxes-for-your-shell-scripts-using-whiptail/#checklist-box
+### Might need: $ TERM=ansi whiptail --title "Welcome Message" --infobox "Howdy, Welcome to OSTechnix.." 8 78 
 ## DE + lightdm (dwm, cinammon, etc)
 ## Editing (gimp, audacity, video??, libreoffice, emacs)
 ## Intel vs AMD??
@@ -144,4 +145,4 @@ sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
 
 sudo apt autoremove
 
-printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
+printf "\e[1;32mYou can now reboot! Have Fun!\e[0m\n"

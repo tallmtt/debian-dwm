@@ -48,6 +48,9 @@ That's it.
 - emacs
 - wireguard
 - joplin
+    - Script to download/update
+    - Make quick script to run joplin appimage with "--no-sandbox" option
+    - sudo ln -s /usr/local/android-studio/bin/studio.sh /usr/bin/android-studio
 - Virtualbox
 - gimp
 - picom
