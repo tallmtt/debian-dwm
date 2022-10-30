@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Add a menu of software to include
+## DE + lightdm (dwm, cinammon, etc)
+## Editing (gimp, audacity, video??, libreoffice, emacs)
+## Intel vs AMD??
+## Internet (Firefox, IRC, Thunderbird, etc)
+## Virtualizing? (virtualbox)
+## Entertainment (vlc, mpd, mpc)
+## Other (keepassxc, nextcloud-desktop, joplin, chess)
+
 # xorg display server installation
 sudo apt install -y xorg
 
@@ -51,7 +60,10 @@ sudo apt install -y libreoffice
 sudo apt install -y hledger hledger-ui hledger-web
 
 # Install 
-# Install 
+# Install suckless stuff
+## git clone suckless
+## download requirements
+## build them all
 
 ### Dwm stuff
 
