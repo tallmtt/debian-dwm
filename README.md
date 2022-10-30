@@ -33,7 +33,7 @@ That's it.
 - File Manager: Ranger
 - ls replaced with exa
 - microcode (intel or amd)
-- Display Manager: Ly Console Manager
+- Display Manager: LightDM
 - Window Manager: dwm
 - Terminal: st
 - Menu: dmenu
@@ -44,25 +44,43 @@ That's it.
 
 ## Add to this:
 
-- Surf
 - emacs
 - wireguard
 - joplin
-    - Script to download/update
-    - Make quick script to run joplin appimage with "--no-sandbox" option
-    - sudo ln -s /usr/local/android-studio/bin/studio.sh /usr/bin/android-studio
+  - Script to download/update
+  - Make quick script to run joplin appimage with "--no-sandbox" option
+  - sudo ln -s /usr/local/android-studio/bin/studio.sh /usr/bin/android-studio
 - Virtualbox
+  - https://www.virtualbox.org/wiki/Linux_Downloads
+  - Download both .deb and guest cd
+  - sudo apt install ./file.deb
 - gimp
 - picom
 - pandoc
 - neomutt
+- keepassxc
+- nextcloud-desktop
+- Video and Audio Tools
+  - ffmpeg
+  - vlc
+- network-manager
+- LibreOffice
+- hledger
+- imagemagick
 - python stuff (using pipx):
   - pywal
+    - sudo apt install python3-pip python3-venv
+    - python3 -m pip install --user pipx
+    - pipx ensurepath
+    - pipx install pywal
   - lektor
+    - pipx install lektor
   - jupyter-notebook
-- sudo apt install network-manager 
+    - pipx install notebook
 
 ### Include
 
-- configs for dwm, surf, st, dmenu, autostart, neomutt, wireguard
-- Wallpaper image
+- configs for dwm, st, dmenu, autostart, neomutt, wireguard
+    - set up symlinks for what are needed
+- Wallpaper images
+    - ibis.jpg
