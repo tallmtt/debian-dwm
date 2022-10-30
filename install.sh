@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Add a menu of software to include
+### See: https://gijs-de-jong.nl/posts/pretty-dialog-boxes-for-your-shell-scripts-using-whiptail/#checklist-box
 ## DE + lightdm (dwm, cinammon, etc)
 ## Editing (gimp, audacity, video??, libreoffice, emacs)
 ## Intel vs AMD??
