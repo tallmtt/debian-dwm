@@ -8,6 +8,7 @@
 ## Internet (Firefox, IRC, Thunderbird, etc)
 ## Virtualizing? (virtualbox)
 ## Entertainment (vlc, mpd, mpc)
+## python stuff (pywal, jupyter, lektor, django, pip/pipx)
 ## Other (keepassxc, nextcloud-desktop, joplin, chess)
 
 # xorg display server installation
