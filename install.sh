@@ -24,7 +24,7 @@ hello_world () {
 ## Functions after Proceeding: choose what to install (y/n)
 base_stuff () {
 
-TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
+TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
 
     clear
 
@@ -68,6 +68,70 @@ echo "Installing neofetch and htop"
 echo "Installing exa..."
 #sudo apt install -y exa
 }
+
+
+suckless () {
+
+    TERM=ansi whiptail --title "Suckless" --infobox "Installing Scukless Stuff (dwm, dmenu, st, slstatus..." 8 78
+
+## --------------------##
+
+# Install
+# Install suckless stuff
+## git clone suckless
+## download requirements
+## build them all
+
+### Dwm stuff
+echo "Installing dwm and suckless tools..."
+## Install dwm/dmenu/st/slstatus requirements
+#sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
+
+# Desktop background browser/handler 
+# feh --bg-fill /path/to/directory 
+# example if you want to use in autostart
+#sudo apt install -y feh
+
+## Install suckless dwm - dynamic window manager
+#mkdir -p ~/.local/src
+#cd ~/.local/src
+#git clone  git@github.com:tallmtt/suckless.git
+#cd suckless/dwm-6.3
+#sudo make clean install
+
+# Install suckless st - simple terminal
+#cd ../st-0.8.5
+#sudo make clean install
+
+# Install suckless dmenu - dynamic manu
+#cd ../dmenu-5.2
+#sudo make clean install
+
+# Install suckless slstatus
+#cd ../slstatus
+#sudo make clean install
+
+## XSessions and dwm.desktop
+#if [[ ! -d /usr/share/xsessions ]]; then
+#    sudo mkdir /usr/share/xsessions
+#fi
+
+#cat > ./temp << "EOF"
+#[Desktop Entry]
+#Encoding=UTF-8
+#Name=dwm
+#Comment=Dynamic window manager
+#Exec=/home/tallmtt/.config/dwm/autostart.sh
+#Icon=dwm
+#Type=XSession
+#EOF
+#sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
+
+echo "Installing Display Manager..."
+#sudo apt install lightdm
+
+}
+
 
 ## Welcome...
 #TERM=ansi whiptail --title "Welcome Message" --msgbox "Howdy, Let's set up your new Debian environment!" 8 78 
@@ -156,62 +220,6 @@ echo "Installing Python Stuff (lektor, jupyter, pywal)..."
 #pipx install pywal
 #pipx install lektor
 #pipx install notebook
-
-## --------------------##
-
-# Install
-# Install suckless stuff
-## git clone suckless
-## download requirements
-## build them all
-
-### Dwm stuff
-echo "Installing dwm and suckless tools..."
-## Install dwm/dmenu/st/slstatus requirements
-#sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
-
-# Desktop background browser/handler 
-# feh --bg-fill /path/to/directory 
-# example if you want to use in autostart
-#sudo apt install -y feh
-
-## Install suckless dwm - dynamic window manager
-#mkdir -p ~/.local/src
-#cd ~/.local/src
-#git clone  git@github.com:tallmtt/suckless.git
-#cd suckless/dwm-6.3
-#sudo make clean install
-
-# Install suckless st - simple terminal
-#cd ../st-0.8.5
-#sudo make clean install
-
-# Install suckless dmenu - dynamic manu
-#cd ../dmenu-5.2
-#sudo make clean install
-
-# Install suckless slstatus
-#cd ../slstatus
-#sudo make clean install
-
-## XSessions and dwm.desktop
-#if [[ ! -d /usr/share/xsessions ]]; then
-#    sudo mkdir /usr/share/xsessions
-#fi
-
-#cat > ./temp << "EOF"
-#[Desktop Entry]
-#Encoding=UTF-8
-#Name=dwm
-#Comment=Dynamic window manager
-#Exec=/home/tallmtt/.config/dwm/autostart.sh
-#Icon=dwm
-#Type=XSession
-#EOF
-#sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
-
-echo "Installing Display Manager..."
-#sudo apt install lightdm
 
 echo "Cleaning up..."
 #sudo apt autoremove
