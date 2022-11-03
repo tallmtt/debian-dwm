@@ -1,4 +1,4 @@
-# Matt's rice void (Built upon Randi's)
+# Matt's new rice void (Built upon Randi's)
 
 NOTE: This is in progress - use at your own risk!
 
@@ -28,7 +28,7 @@ $ sudo reboot
 ```
 That's it.
 
-## Installs
+## Installs and sets up:
 
 - File Manager: Ranger
 - ls replaced with exa
@@ -81,6 +81,8 @@ That's it.
 ### Include
 
 - configs for dwm, st, dmenu, autostart, neomutt, wireguard
+    - git for configs
     - set up symlinks for what are needed
 - Wallpaper images
+    - git for my walls
     - ibis.jpg

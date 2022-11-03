@@ -14,33 +14,19 @@
 ## python stuff (pywal, jupyter, lektor, django, pip/pipx)
 ## Other (keepassxc, nextcloud-desktop, joplin, chess)
 
+clear
+
 ## Define all functions first
 hello_world () {
    echo 'hello, world'
 }
 
 ## Functions after Proceeding: choose what to install (y/n)
-
 base_stuff () {
-    
-}
 
-## Welcome...
-TERM=ansi whiptail --title "Welcome Message" --msgbox "Howdy, Let's set up your new Debian environment!" 8 78 
+TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
 
-TERM=ansi whiptail --title "CONFIRMATION" --yesno "Should I proceed" 8 78 
-if [[ $? -eq 0 ]]; then 
-    whiptail --title "MESSAGE" --msgbox "Process completed successfully." 8 78
-    # Example function called
-    hello_world
-    ## Bash install function
-elif [[ $? -eq 1 ]]; then 
-  whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
-elif [[ $? -eq 255 ]]; then 
-  whiptail --title "MESSAGE" --msgbox "User pressed ESC. Exiting the script" 8 78 
-fi 
-
-hello_world
+    clear
 
 #####################
 ## Install base stuff
@@ -50,11 +36,11 @@ hello_world
 echo "Installing xorg..."
 #sudo apt install -y xorg
 
-# Microcode for Intel/AMD 
+# Microcode for Intel/AMD
 #echo "Installing amd-microcode..."
 # sudo apt install -y amd-microcode
 echo "Installing intel-microcode..."
-#sudo apt install -y intel-microcode 
+#sudo apt install -y intel-microcode
 
 # Sound packages
 echo "Installing Sound packages..."
@@ -81,8 +67,23 @@ echo "Installing neofetch and htop"
 # - [ ] TODO: alias ls='exa --header --color=always --group-directories-first'
 echo "Installing exa..."
 #sudo apt install -y exa
+}
 
-#####################
+## Welcome...
+#TERM=ansi whiptail --title "Welcome Message" --msgbox "Howdy, Let's set up your new Debian environment!" 8 78 
+#TERM=ansi whiptail --title "CONFIRMATION" --yesno "Should I proceed" 8 78 
+
+TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
+
+if [[ $? -eq 0 ]]; then
+    base_stuff    ## Calling the Base Stuff Install function
+elif [[ $? -eq 1 ]]; then
+  whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
+elif [[ $? -eq 255 ]]; then
+  whiptail --title "MESSAGE" --msgbox "User pressed ESC. Exiting the script" 8 78 
+fi
+
+# hello_world # Test calling bash function
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
@@ -158,7 +159,7 @@ echo "Installing Python Stuff (lektor, jupyter, pywal)..."
 
 ## --------------------##
 
-# Install 
+# Install
 # Install suckless stuff
 ## git clone suckless
 ## download requirements
