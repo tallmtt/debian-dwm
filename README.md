@@ -63,6 +63,12 @@ That's it.
 - Video and Audio Tools
   - ffmpeg
   - vlc
+  - cmus (cli audio player)
+  - qmmp (simple mp3 player)
+  - lmms (dgtal audio workstation)
+  - Video editor??
+  - audacity
+  - easytag
 - network-manager
 - LibreOffice
 - hledger
