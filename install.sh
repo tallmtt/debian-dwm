@@ -25,8 +25,9 @@ hello_world () {
 base_stuff () {
 
 TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
+#TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
 
-    clear
+#    clear
 
 #####################
 ## Install base stuff
@@ -70,9 +71,9 @@ echo "Installing exa..."
 }
 
 
-suckless () {
+suckless_stuff () {
 
-    TERM=ansi whiptail --title "Suckless" --infobox "Installing Scukless Stuff (dwm, dmenu, st, slstatus..." 8 78
+    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff (dwm, dmenu, st, slstatus..." 8 78
 
 ## --------------------##
 
@@ -140,7 +141,8 @@ echo "Installing Display Manager..."
 TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
 
 if [[ $? -eq 0 ]]; then
-    base_stuff    ## Calling the Base Stuff Install function
+    base_stuff ## Calling the Base Stuff Install function
+    suckless_stuff  ## Install Suckless
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
