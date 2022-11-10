@@ -91,7 +91,8 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
     cd ~/.local/src
-    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
+#    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
+    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git pull git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
@@ -99,7 +100,7 @@ echo "Installing dwm and suckless tools..."
 ## Install suckless dwm - dynamic window manager
 # Add file for default wallpaper/colors
 mkdir -p ~/.cache/wal
-cp suckless/configs/colors-wal-dwm.h ~/.cache/wal/colors-wal-dwm.h
+cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cd suckless/dwm-6.3
 sudo make clean install
 
