@@ -96,10 +96,12 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
 
-## Install suckless dwm - dynamic window manager
-# Add file for default wallpaper/colors
+## Copy color files for default wallpaper/colors
 mkdir -p ~/.cache/wal
 cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
+cp -v suckless/configs/colors-wal-st.h ~/.cache/wal
+
+## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
 #sudo make clean install
 
