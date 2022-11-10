@@ -24,7 +24,7 @@ hello_world () {
 ## Functions after Proceeding: choose what to install (y/n)
 base_stuff () {
 
-TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup... \n - Windowing: xorg lightdm \n - CPU: microcode (amd/intel) \n - Sound: pulseaudio alsa-utils pavucontrol volumeicon-alsa \n - Network: network-manager \n - neofetch \n - htop \n - exa \n" 8 78
+TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup... \n - Windowing: xorg lightdm \n - CPU: microcode (amd/intel) \n - Sound: pulseaudio alsa-utils pavucontrol volumeicon-alsa \n - Network: network-manager \n - neofetch \n - htop \n - exa \n" 15 78
 #TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
 
 clear
@@ -69,35 +69,38 @@ sudo apt install lightdm
 
 suckless_stuff () {
 
-    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n (dwm, dmenu, st, slstatus..." 30 78
+    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n 
+
+- Utilities: picom, feh \n
+- Build requirements: build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev \n
+- dwm \n
+- dmenu \n
+- st \n
+- slstatus" 30 78
 
 ## --------------------##
 
-# Install
 # Install suckless stuff
-## git clone suckless
-## download requirements
-## build them all
 
-    ## Clone suckless tools and configs
+# Install picom X-org compositor
+# Use https://wiki.archlinux.org/title/Picom for information on use
+echo "Installing picom..."
+sudo apt install -y picom
+
+## Desktop background browser/handler 
+# feh --bg-fill /path/to/directory # example if you want to use in autostart
+sudo apt install -y feh
+
+## Install dwm/dmenu/st/slstatus requirements
+sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
+
+## Clone suckless tools and configs
 #    mkdir -p ~/.local/src # create any intermediate directories that don't exist;
 #    cd ~/.local/src
 #    git clone git@github.com:tallmtt/suckless.git
 
-    # Install picom X-org compositor
-# Use https://wiki.archlinux.org/title/Picom for information on use
-echo "Installing picom..."
-#sudo apt install -y picom
-
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
-## Install dwm/dmenu/st/slstatus requirements
-#sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
-
-# Desktop background browser/handler 
-# feh --bg-fill /path/to/directory 
-# example if you want to use in autostart
-#sudo apt install -y feh
 
 ## Install suckless dwm - dynamic window manager
 #mkdir -p ~/.local/src
