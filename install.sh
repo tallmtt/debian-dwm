@@ -91,7 +91,9 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
     cd ~/.local/src
-    git clone git@github.com:tallmtt/suckless.git
+    pwd
+    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
+#    git clone git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
