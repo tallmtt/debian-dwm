@@ -99,7 +99,7 @@ echo "Installing dwm and suckless tools..."
 ## Install suckless dwm - dynamic window manager
 # Add file for default wallpaper/colors
 mkdir -p ~/.cache/wal
-ln -s suckless/configs/colors-wal-dwm.h ~/.cache/wal/colors-wal-dwm.h
+cp suckless/configs/colors-wal-dwm.h ~/.cache/wal/colors-wal-dwm.h
 cd suckless/dwm-6.3
 sudo make clean install
 
