@@ -106,16 +106,16 @@ cp -v suckless/configs/colors-wal-dmenu.h ~/.cache/wal
 cd suckless/dwm-6.3
 #sudo make clean install
 
-# Install suckless st - simple terminal
-#cd ../st-0.8.5
-#sudo make clean install
-
 # Install suckless dmenu - dynamic manu
 cd ../dmenu-5.2
-sudo make clean install
+#sudo make clean install
 
 # Install suckless slstatus
-#cd ../slstatus
+cd ../slstatus
+sudo make clean install
+
+# Install suckless st - simple terminal
+#cd ../st-0.8.5
 #sudo make clean install
 
 ## XSessions and dwm.desktop
