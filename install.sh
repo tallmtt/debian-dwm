@@ -91,8 +91,7 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
     cd ~/.local/src
-#    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
-    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git pull git@github.com:tallmtt/suckless.git
+    GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
@@ -102,7 +101,7 @@ echo "Installing dwm and suckless tools..."
 mkdir -p ~/.cache/wal
 cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cd suckless/dwm-6.3
-sudo make clean install
+#sudo make clean install
 
 # Install suckless st - simple terminal
 cd ../st-0.8.5
