@@ -105,8 +105,8 @@ cd suckless/dwm-6.3
 sudo make clean install
 
 # Install suckless st - simple terminal
-#cd ../st-0.8.5
-#sudo make clean install
+cd ../st-0.8.5
+sudo make clean install
 
 # Install suckless dmenu - dynamic manu
 #cd ../dmenu-5.2
