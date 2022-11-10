@@ -229,7 +229,8 @@ if [[ $? -eq 0 ]]; then
     cp -vi git/vh* ~/.ssh/
     rm -r git.tgz git
 #    base_stuff ## Calling the Base Stuff Install function
-    suckless_stuff  ## Install Suckless
+## Working on suckless tools
+#    suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
