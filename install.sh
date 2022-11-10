@@ -210,8 +210,8 @@ TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up 
 
 if [[ $? -eq 0 ]]; then
     base_stuff ## Calling the Base Stuff Install function
-    suckless_stuff  ## Install Suckless
-    tool_stuff ## Install Tools
+#    suckless_stuff  ## Install Suckless
+#    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
