@@ -89,9 +89,9 @@ sudo apt install -y feh
 sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
 
 ## Clone suckless tools and configs
-#    mkdir -p ~/.local/src # create any intermediate directories that don't exist;
-#    cd ~/.local/src
-#    git clone git@github.com:tallmtt/suckless.git
+    mkdir -p ~/.local/src # create any intermediate directories that don't exist;
+    cd ~/.local/src
+    git clone git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
@@ -245,7 +245,7 @@ fi
 #pipx install notebook
 
 echo "Cleaning up..."
-#sudo apt autoremove
+sudo apt autoremove
 
 #clear
 
