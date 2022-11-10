@@ -83,6 +83,8 @@ That's it.
     - pipx install lektor
   - jupyter-notebook
     - pipx install notebook
+  - grip (for emacs)
+    - python3 -m pip install grip
 
 ### Include
 
