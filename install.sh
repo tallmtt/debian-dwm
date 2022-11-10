@@ -91,7 +91,7 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
     cd ~/.local/src
-    git clone https://github.com/tallmtt/suckless.git
+    git clone git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
@@ -219,8 +219,9 @@ if [[ $? -eq 0 ]]; then
     gpg git.tgz.gpg
     tar zxvf git.tgz
     cp -vi git/vh* ~/.ssh/
+    rm -r git.tgz git
 #    base_stuff ## Calling the Base Stuff Install function
-#    suckless_stuff  ## Install Suckless
+    suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
