@@ -69,7 +69,7 @@ sudo apt install lightdm
 
 suckless_stuff () {
 
-    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n (dwm, dmenu, st, slstatus..." 8 78
+    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n (dwm, dmenu, st, slstatus..." 30 78
 
 ## --------------------##
 
