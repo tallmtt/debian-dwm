@@ -218,6 +218,7 @@ TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up 
 if [[ $? -eq 0 ]]; then
     gpg git.tgz.gpg
     tar zxvf git.tgz
+    cp -vi git/vh* ~/.ssh/
 #    base_stuff ## Calling the Base Stuff Install function
 #    suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
