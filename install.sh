@@ -91,19 +91,14 @@ sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfre
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
     cd ~/.local/src
-    pwd
     GIT_SSH_COMMAND="ssh -i ~/.ssh/vh" git clone git@github.com:tallmtt/suckless.git
-#    git clone git@github.com:tallmtt/suckless.git
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
 
 ## Install suckless dwm - dynamic window manager
-#mkdir -p ~/.local/src
-#cd ~/.local/src
-#git clone  git@github.com:tallmtt/suckless.git
-#cd suckless/dwm-6.3
-#sudo make clean install
+cd suckless/dwm-6.3
+sudo make clean install
 
 # Install suckless st - simple terminal
 #cd ../st-0.8.5
