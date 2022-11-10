@@ -116,7 +116,12 @@ cd ../slstatus
 
 # Install suckless st - simple terminal
 cd ../st-0.8.5
-sudo make clean install
+#sudo make clean install
+
+####
+## Eveything so far above works!!!
+## Not compiling to avoid excess use
+####
 
 ## XSessions and dwm.desktop
 #if [[ ! -d /usr/share/xsessions ]]; then
