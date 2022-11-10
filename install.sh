@@ -24,7 +24,7 @@ hello_world () {
 ## Functions after Proceeding: choose what to install (y/n)
 base_stuff () {
 
-TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
+TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup... \n - Windowing: xorg lightdm \n - CPU: microcode (amd/intel) \n - Sound: pulseaudio alsa-utils pavucontrol volumeicon-alsa \n - Network: network-manager \n - neofetch \n - htop \n - exa \n" 8 78
 #TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
 
 clear
@@ -51,14 +51,6 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 echo "Installing Network Manager..."
 sudo apt install -y network-manager
 
-# Install ImageMagick
-echo "Installing ImageMagick..."
-sudo apt install -y imagemagick
-
-# File Manager (eg. pcmanfm, thunar, ranger)
-echo "Installing ranger filemanager..."
-sudo apt install -y ranger
-
 # Neofetch/HTOP
 echo "Installing neofetch and htop"
 sudo apt install -y neofetch htop
@@ -69,15 +61,18 @@ sudo apt install -y neofetch htop
 echo "Installing exa..."
 sudo apt install -y exa
 
+echo "Installing Display Manager..."
+sudo apt install lightdm
+
 } # End base stuff
 
 
 suckless_stuff () {
 
-    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff (dwm, dmenu, st, slstatus..." 8 78
+    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n (dwm, dmenu, st, slstatus..." 8 78
 
 ## --------------------##
-    
+
 # Install
 # Install suckless stuff
 ## git clone suckless
@@ -139,14 +134,11 @@ echo "Installing dwm and suckless tools..."
 #EOF
 #sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
 
-echo "Installing Display Manager..."
-#sudo apt install lightdm
-
 } # End Suckless Stuff
 
 tool_stuff () {
 
-TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools..." 8 78
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools... \n - imagemagick \n - ranger \n" 30 78
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
@@ -160,6 +152,14 @@ echo "Installing emacs..."
 # Install wireguard
 echo "Installing wireguard..."
 #sudo apt install -y wireguard
+
+# Install ImageMagick
+echo "Installing ImageMagick..."
+#sudo apt install -y imagemagick
+
+# File Manager (eg. pcmanfm, thunar, ranger)
+echo "Installing ranger filemanager..."
+#sudo apt install -y ranger
 
 # Install joplin
 echo "Installing Joplin..."
@@ -209,9 +209,9 @@ echo "Installing Video and Audio Tools..."
 TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
 
 if [[ $? -eq 0 ]]; then
-    base_stuff ## Calling the Base Stuff Install function
-#    suckless_stuff  ## Install Suckless
-#    tool_stuff ## Install Tools
+#    base_stuff ## Calling the Base Stuff Install function
+    suckless_stuff  ## Install Suckless
+    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
