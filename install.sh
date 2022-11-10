@@ -86,7 +86,7 @@ sudo apt install -y picom
 sudo apt install -y feh
 
 ## Install dwm/dmenu/st/slstatus requirements
-sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev
+sudo apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev libharfbuzz-dev
 
 ## Clone suckless tools and configs
     mkdir -p ~/.local/src # create any intermediate directories that don't exist;
