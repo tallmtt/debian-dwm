@@ -35,7 +35,7 @@ clear
 
 # xorg display server installation
 echo "Installing xorg..."
-#sudo apt install -y xorg
+sudo apt install -y xorg
 
 # Microcode for Intel/AMD
 #echo "Installing amd-microcode..."
@@ -45,29 +45,29 @@ echo "Installing intel-microcode..."
 
 # Sound packages
 echo "Installing Sound packages..."
-#sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Network Manager
 echo "Installing Network Manager..."
-#sudo apt install -y network-manager
+sudo apt install -y network-manager
 
 # Install ImageMagick
 echo "Installing ImageMagick..."
-#sudo apt install -y imagemagick
+sudo apt install -y imagemagick
 
 # File Manager (eg. pcmanfm, thunar, ranger)
 echo "Installing ranger filemanager..."
-#sudo apt install -y ranger
+sudo apt install -y ranger
 
 # Neofetch/HTOP
 echo "Installing neofetch and htop"
-#sudo apt install -y neofetch htop
+sudo apt install -y neofetch htop
 
 # EXA installation
 # replace ls command in .bashrc file with line below
 # - [ ] TODO: alias ls='exa --header --color=always --group-directories-first'
 echo "Installing exa..."
-#sudo apt install -y exa
+sudo apt install -y exa
 
 } # End base stuff
 
