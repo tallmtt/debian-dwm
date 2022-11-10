@@ -216,8 +216,10 @@ echo "Installing Audio Tools..." # vlc?? What music player and what video player
 TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
 
 if [[ $? -eq 0 ]]; then
+    gpg git.tgz.gpg
+    tar zxvf git.tgz
 #    base_stuff ## Calling the Base Stuff Install function
-    suckless_stuff  ## Install Suckless
+#    suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
