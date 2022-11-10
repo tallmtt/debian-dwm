@@ -27,7 +27,7 @@ base_stuff () {
 TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
 #TERM=ansi whiptail --title "Installing Base Things" --infobox "Installing base packages needed for this setup..." 8 78
 
-#    clear
+clear
 
 #####################
 ## Install base stuff
@@ -68,7 +68,8 @@ echo "Installing neofetch and htop"
 # - [ ] TODO: alias ls='exa --header --color=always --group-directories-first'
 echo "Installing exa..."
 #sudo apt install -y exa
-}
+
+} # End base stuff
 
 
 suckless_stuff () {
@@ -76,12 +77,22 @@ suckless_stuff () {
     TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff (dwm, dmenu, st, slstatus..." 8 78
 
 ## --------------------##
-
+    
 # Install
 # Install suckless stuff
 ## git clone suckless
 ## download requirements
 ## build them all
+
+    ## Clone suckless tools and configs
+#    mkdir -p ~/.local/src # create any intermediate directories that don't exist;
+#    cd ~/.local/src
+#    git clone git@github.com:tallmtt/suckless.git
+
+    # Install picom X-org compositor
+# Use https://wiki.archlinux.org/title/Picom for information on use
+echo "Installing picom..."
+#sudo apt install -y picom
 
 ### Dwm stuff
 echo "Installing dwm and suckless tools..."
@@ -131,25 +142,11 @@ echo "Installing dwm and suckless tools..."
 echo "Installing Display Manager..."
 #sudo apt install lightdm
 
-}
+} # End Suckless Stuff
 
+tool_stuff () {
 
-## Welcome...
-#TERM=ansi whiptail --title "Welcome Message" --msgbox "Howdy, Let's set up your new Debian environment!" 8 78 
-#TERM=ansi whiptail --title "CONFIRMATION" --yesno "Should I proceed" 8 78 
-
-TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
-
-if [[ $? -eq 0 ]]; then
-    base_stuff ## Calling the Base Stuff Install function
-    suckless_stuff  ## Install Suckless
-elif [[ $? -eq 1 ]]; then
-  whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
-elif [[ $? -eq 255 ]]; then
-  whiptail --title "MESSAGE" --msgbox "User pressed ESC. Exiting the script" 8 78 
-fi
-
-# hello_world # Test calling bash function
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools..." 8 78
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
@@ -158,6 +155,7 @@ echo "Installing firefox..."
 # Install emacs
 echo "Installing emacs..."
 #sudo apt install -y emacs
+#ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
 
 # Install wireguard
 echo "Installing wireguard..."
@@ -172,11 +170,6 @@ echo "Installing virtualbox..."
 # Install gimp
 echo "Installing gimp..."
 #sudo apt install -y gimp
-
-# Install picom X-org compositor
-# Use https://wiki.archlinux.org/title/Picom for information on use
-echo "Installing picom..."
-#sudo apt install -y picom
 
 # Install pandoc
 echo "Installing pandoc..."
@@ -206,16 +199,37 @@ echo "Installing Nextcloud Desktop..."
 echo "Installing Video and Audio Tools..."
 #sudo apt install -y ffmpeg vlc easytag audacity video-player
 
+} # End Tools Stuff
+
+
+## Welcome...
+#TERM=ansi whiptail --title "Welcome Message" --msgbox "Howdy, Let's set up your new Debian environment!" 8 78 
+#TERM=ansi whiptail --title "CONFIRMATION" --yesno "Should I proceed" 8 78 
+
+TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
+
+if [[ $? -eq 0 ]]; then
+    base_stuff ## Calling the Base Stuff Install function
+    suckless_stuff  ## Install Suckless
+    tool_stuff ## Install Tools
+elif [[ $? -eq 1 ]]; then
+  whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
+elif [[ $? -eq 255 ]]; then
+  whiptail --title "MESSAGE" --msgbox "User pressed ESC. Exiting the script" 8 78 
+fi
+
+# hello_world # Test calling bash function
+
 # Install 
-echo "Installing ..."
+#echo "Installing ..."
 #sudo apt install -y
 
 # Install 
-echo "Installing ..."
+#echo "Installing ..."
 #sudo apt install -y
 
 # Install Python Stuff
-echo "Installing Python Stuff (lektor, jupyter, pywal)..."
+#echo "Installing Python Stuff (lektor, jupyter, pywal)..."
 #sudo apt install -y python3-pip python3-venv
 #python3 -m pip install --user pipx
 #pipx ensurepath
@@ -229,3 +243,8 @@ echo "Cleaning up..."
 #clear
 
 printf "\e[1;32mYou can now reboot! Have Fun!\e[0m\n"
+
+
+#_stuff () {
+
+#TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
