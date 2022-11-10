@@ -112,11 +112,11 @@ cd ../dmenu-5.2
 
 # Install suckless slstatus
 cd ../slstatus
-sudo make clean install
+#sudo make clean install
 
 # Install suckless st - simple terminal
-#cd ../st-0.8.5
-#sudo make clean install
+cd ../st-0.8.5
+sudo make clean install
 
 ## XSessions and dwm.desktop
 #if [[ ! -d /usr/share/xsessions ]]; then
