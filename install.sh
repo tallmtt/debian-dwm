@@ -2,10 +2,11 @@
 
 # Add a menu of software to include
 ### See: https://gijs-de-jong.nl/posts/pretty-dialog-boxes-for-your-shell-scripts-using-whiptail/#checklist-box
+###      https://en.wikibooks.org/wiki/Bash_Shell_Scripting/Whiptail
 ### Might need: $ TERM=ansi whiptail --title "Welcome Message" --infobox "Howdy, Welcome to OSTechnix.." 8 78
 ## Bash scripting help: https://linuxize.com/post/bash-functions/
 ## DE + lightdm (dwm, cinammon, etc)
-## Editing (gimp, audacity, video??, libreoffice, emacs)
+## Editing (gimp, audacity, video: flowblade, libreoffice, emacs)
 ## Intel vs AMD??
 ## Internet (Firefox, IRC, Thunderbird, etc)
 ## Virtualizing? (virtualbox)
@@ -69,14 +70,7 @@ sudo apt install lightdm
 
 suckless_stuff () {
 
-    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n 
-
-- Utilities: picom, feh \n
-- Build requirements: build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev \n
-- dwm \n
-- dmenu \n
-- st \n
-- slstatus" 30 78
+    TERM=ansi whiptail --title "Suckless" --msgbox "Installing Suckless Stuff \n - Utilities: picom, feh \n - Build requirements: build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev fonts-font-awesome libpam0g-dev libxcb-xkb-dev \n - dwm \n - dmenu \n - st \n - slstatus" 30 78
 
 ## --------------------##
 
@@ -143,6 +137,12 @@ tool_stuff () {
 
 TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools... \n - imagemagick \n - ranger \n" 30 78
 
+# Audio tools: ffmpeg, easytag, audacity, qmmp
+# Video tools: flowblade,
+# Image tools: gimp, inkscape, imagemagick
+# Document tools: emacs, libreoffice, 
+# Other: virtualbox
+
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
 #sudo apt install -y firefox-esr 
@@ -174,6 +174,10 @@ echo "Installing virtualbox..."
 echo "Installing gimp..."
 #sudo apt install -y gimp
 
+# Install flowblade (video)
+echo "Installing flowblade..."
+#sudo apt install -y flowblade
+
 # Install pandoc
 echo "Installing pandoc..."
 #sudo apt install -y pandoc
@@ -199,8 +203,8 @@ echo "Installing Nextcloud Desktop..."
 #sudo apt install -y nextcloud-desktop
 
 # Install ffmpeg
-echo "Installing Video and Audio Tools..."
-#sudo apt install -y ffmpeg vlc easytag audacity video-player
+echo "Installing Audio Tools..." # vlc?? What music player and what video player
+#sudo apt install -y ffmpeg easytag audacity qmmp
 
 } # End Tools Stuff
 
