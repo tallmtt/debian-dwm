@@ -58,6 +58,7 @@ That's it.
 - picom
 - pandoc
 - neomutt
+- PCmanFM - File manager
 - keepassxc
 - nextcloud-desktop
 - Video and Audio Tools
