@@ -19,7 +19,7 @@ clear
 
 ## Define all functions first
 hello_world () {
-   echo 'hello, world'
+    echo 'Hello World!'
 }
 
 ## Functions after Proceeding: choose what to install (y/n)
@@ -124,10 +124,18 @@ cd ../st-0.8.5
 ####
 
 ## XSessions and dwm.desktop
-#if [[ ! -d /usr/share/xsessions ]]; then
-#    sudo mkdir /usr/share/xsessions
-#fi
+if [[ ! -d /usr/share/xsessions ]]; then
+    sudo mkdir /usr/share/xsessions
+fi
 
+## Move autostart items for dwm
+mkdir -p ~/.config/dwm
+## link autostart script for dwm autostart plugin
+ln -s ~/.local/src/suckless/configs/autostart.sh ~/.config/dwm/autostart.sh
+## cp dwm desktop file to xsessions so lightdm can start dwm (through executing the autostart script)
+sudo cp ~/.local/src/suckless/configs/dwm.desktop /usr/share/xsessions
+
+## Old way:
 #cat > ./temp << "EOF"
 #[Desktop Entry]
 #Encoding=UTF-8
@@ -138,6 +146,8 @@ cd ../st-0.8.5
 #Type=XSession
 #EOF
 #sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
+
+## At this time, should boot up into dwm
 
 } # End Suckless Stuff
 
