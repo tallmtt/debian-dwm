@@ -238,7 +238,7 @@ if [[ $? -eq 0 ]]; then
 #    tar zxvf git.tgz
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
-#    base_stuff ## Calling the Base Stuff Install function
+    base_stuff ## Calling the Base Stuff Install function
 ## Working on suckless tools
     suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
