@@ -102,6 +102,8 @@ cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-st.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-dmenu.h ~/.cache/wal
 cp -v ~/.local/src/suckless/configs/fehbg ~/.config/dwm/fehbg
+mkdir -p ~/Pictures/Wallpaper
+cp -v ~/.local/src/suckless/configs/Ibis.jpg ~/Pictures/Wallpapers/Ibis.jpg
 
 ## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
