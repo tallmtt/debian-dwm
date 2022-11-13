@@ -101,7 +101,7 @@ mkdir -p ~/.cache/wal
 cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-st.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-dmenu.h ~/.cache/wal
-ln -s suckless/configs/fehbg ~/.config/dwm/fehbg
+ln -s ~/.local/src/suckless/configs/fehbg ~/.config/dwm/fehbg
 
 ## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
