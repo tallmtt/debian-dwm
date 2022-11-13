@@ -289,9 +289,9 @@ if [[ $? -eq 0 ]]; then
 #    tar zxvf git.tgz
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
-    base_stuff ## Calling the Base Stuff Install function
+#    base_stuff ## Calling the Base Stuff Install function
     suckless_stuff  ## Install Suckless
-    tool_stuff ## Install Tools
+#    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
