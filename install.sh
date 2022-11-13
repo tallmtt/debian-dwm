@@ -108,7 +108,7 @@ cd suckless/dwm-6.3
 
 # Install suckless dmenu - dynamic manu
 cd ../dmenu-5.2
-sudo make clean install
+#sudo make clean install
 
 # Install suckless slstatus
 cd ../slstatus
@@ -233,8 +233,7 @@ if [[ $? -eq 0 ]]; then
 #    tar zxvf git.tgz
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
-    base_stuff ## Calling the Base Stuff Install function
-## Working on suckless tools
+#    base_stuff ## Calling the Base Stuff Install function
     suckless_stuff  ## Install Suckless
 #    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
