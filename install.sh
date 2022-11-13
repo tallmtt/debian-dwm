@@ -287,8 +287,8 @@ if [[ $? -eq 0 ]]; then
 #    tar zxvf git.tgz
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
-#    base_stuff ## Calling the Base Stuff Install function
-#    suckless_stuff  ## Install Suckless
+    base_stuff ## Calling the Base Stuff Install function
+    suckless_stuff  ## Install Suckless
     tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
@@ -302,8 +302,3 @@ sudo apt autoremove
 #clear
 
 printf "\e[1;32mYou can now reboot! Have Fun!\e[0m\n"
-
-
-#_stuff () {
-
-#TERM=ansi whiptail --title "Installing Base Things" --msgbox "Installing base packages needed for this setup..." 8 78
