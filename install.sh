@@ -102,8 +102,10 @@ cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-st.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-dmenu.h ~/.cache/wal
 cp -v ~/.local/src/suckless/configs/fehbg ~/.config/dwm/fehbg
-mkdir -p ~/Pictures/Wallpaper
+mkdir -p ~/Pictures/Wallpapers
 cp -v ~/.local/src/suckless/configs/Ibis.jpg ~/Pictures/Wallpapers/Ibis.jpg
+sudo cp -v /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf-bak
+sudo cp -v ~/.local/src/suckless/configs/lightdm-gtk-greeter.conf /etc/lightdm/
 
 ## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
