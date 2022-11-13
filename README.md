@@ -32,7 +32,8 @@ That's it.
 
 - File Manager: Ranger
 - ls replaced with exa
-- microcode (intel or amd)
+  - [ ] bashrc edits (add >> aliases for ls)
+- [ ] microcode (intel or amd)
 - Display Manager: LightDM
 - Window Manager: dwm
 - Terminal: st
@@ -41,7 +42,7 @@ That's it.
 - Image browser: feh or nitrogen
 - neofetch 
 - htop
-  
+
 ## Add to this:
 
 - emacs
