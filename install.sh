@@ -233,7 +233,7 @@ sudo apt install -y pcmanfm
 
 # Install Virtualbox
 echo "Installing virtualbox..."
-sudo apt install -y virtualbox
+sudo apt install -y virtualbox-7.0
 
 # Install keepassxc
 echo "Installing KeePassXC..."
