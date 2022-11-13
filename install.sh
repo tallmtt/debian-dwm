@@ -266,11 +266,11 @@ sudo apt install -y ffmpeg easytag audacity qmmp cmus lmms
 # Install Python Stuff
 echo "Installing Python Stuff (lektor, jupyter, pywal)..."
 sudo apt install -y python3-pip python3-venv
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
-python3 -m pipx install pywal
-python3 -m pipx install lektor
-python3 -m pipx install notebook
+#python3 -m pip install --user pipx
+#python3 -m pipx ensurepath
+#python3 -m pipx install pywal
+#python3 -m pipx install lektor
+#python3 -m pipx install notebook
 
 } # End Tools Stuff
 
