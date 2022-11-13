@@ -18,9 +18,9 @@
 clear
 
 ## Define all functions first
-hello_world () {
-    echo 'Hello World!'
-}
+#hello_world () {
+#    echo 'Hello World!'
+#}
 
 ## Functions after Proceeding: choose what to install (y/n)
 base_stuff () {
@@ -101,6 +101,7 @@ mkdir -p ~/.cache/wal
 cp -v suckless/configs/colors-wal-dwm.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-st.h ~/.cache/wal
 cp -v suckless/configs/colors-wal-dmenu.h ~/.cache/wal
+ln -s suckless/configs/fehbg ~/.config/dwm/fehbg
 
 ## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
@@ -233,7 +234,7 @@ sudo apt install -y pcmanfm
 
 # Install Virtualbox
 echo "Installing virtualbox..."
-sudo apt install -y virtualbox-7.0
+sudo apt install -y virtualbox
 
 # Install keepassxc
 echo "Installing KeePassXC..."
