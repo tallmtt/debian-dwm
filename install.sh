@@ -184,20 +184,20 @@ sudo apt install -y neomutt
 
 # Install emacs
 echo "Installing emacs..."
-sudo apt install -y emacs
-ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
+#sudo apt install -y emacs
+#ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
 
 # Install LibreOffice
 echo "Installing libreoffice..."
-sudo apt install -y libreoffice
+#sudo apt install -y libreoffice
 
 # Install joplin
 echo "Installing Joplin..."
-wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+#wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 
 # Install pandoc
 echo "Installing pandoc..."
-sudo apt install -y pandoc
+#sudo apt install -y pandoc
 
 #####
 
@@ -205,15 +205,15 @@ sudo apt install -y pandoc
 
 # Install ImageMagick
 echo "Installing ImageMagick..."
-#sudo apt install -y imagemagick
+sudo apt install -y imagemagick
 
 # Install gimp
 echo "Installing gimp..."
-#sudo apt install -y gimp
+sudo apt install -y gimp
 
 # Install inkscape
 echo "Installing inkscape..."
-#sudo apt install -y inkscape
+sudo apt install -y inkscape
 
 #####
 
@@ -221,11 +221,11 @@ echo "Installing inkscape..."
 
 # File Manager (eg. pcmanfm, thunar, ranger)
 echo "Installing ranger filemanager..."
-#sudo apt install -y ranger
+sudo apt install -y ranger
 
 # File Manager (eg. pcmanfm, thunar, ranger)
 echo "Installing pcmanfm filemanager..."
-#sudo apt install -y pcmanfm
+sudo apt install -y pcmanfm
 
 #####
 
