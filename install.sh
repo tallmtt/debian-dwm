@@ -184,12 +184,12 @@ sudo apt install -y neomutt
 
 # Install emacs
 echo "Installing emacs..."
-#sudo apt install -y emacs
+sudo apt install -y emacs
 #ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
 
 # Install LibreOffice
 echo "Installing libreoffice..."
-#sudo apt install -y libreoffice
+sudo apt install -y libreoffice
 
 # Install joplin
 echo "Installing Joplin..."
@@ -197,7 +197,7 @@ echo "Installing Joplin..."
 
 # Install pandoc
 echo "Installing pandoc..."
-#sudo apt install -y pandoc
+sudo apt install -y pandoc
 
 #####
 
@@ -233,14 +233,15 @@ sudo apt install -y pcmanfm
 
 # Install Virtualbox
 echo "Installing virtualbox..."
+sudo apt install -y virtualbox
 
 # Install keepassxc
 echo "Installing KeePassXC..."
-#sudo apt install -y keepassxc
+sudo apt install -y keepassxc
 
 # Install hledger
 echo "Installing hledger..."
-#sudo apt install -y hledger hledger-ui hledger-web
+sudo apt install -y hledger hledger-ui hledger-web
 
 #####
 
