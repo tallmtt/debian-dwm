@@ -41,7 +41,7 @@ That's it.
 - Image browser: feh or nitrogen
 - neofetch 
 - htop
-
+  
 ## Add to this:
 
 - emacs
@@ -66,8 +66,8 @@ That's it.
   - vlc
   - cmus (cli audio player)
   - qmmp (simple mp3 player)
-  - lmms (dgtal audio workstation)
-  - Video editor??
+  - lmms (digtal audio workstation)
+  - flowblade
   - audacity
   - easytag
 - network-manager

@@ -148,17 +148,12 @@ sudo cp ~/.local/src/suckless/configs/dwm.desktop /usr/share/xsessions
 
 tool_stuff () {
 
-TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools... \n - imagemagick \n - ranger \n" 30 78
-
-# Audio tools: ffmpeg, easytag, audacity, qmmp
-# Video tools: flowblade,
-# Image tools: gimp, inkscape, imagemagick
-# Document tools: emacs, libreoffice, 
-# Other: virtualbox
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - File Management: PCmanFM, ranger \n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Video tools: flowblade \n - Image tools: gimp, inkscape, imagemagick \n - Document tools: emacs, libreoffice \n - Other: hledger, virtualbox \n
+ \n" 30 78
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
-#sudo apt install -y firefox-esr 
+#sudo apt install -y firefox-esr
 
 # Install emacs
 echo "Installing emacs..."
@@ -234,8 +229,11 @@ if [[ $? -eq 0 ]]; then
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
 #    base_stuff ## Calling the Base Stuff Install function
-    suckless_stuff  ## Install Suckless
-#    tool_stuff ## Install Tools
+    #    suckless_stuff  ## Install Suckless
+    ##
+    ## Working on Tools Stuff now
+    ##
+    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
