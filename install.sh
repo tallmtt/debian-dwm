@@ -187,33 +187,50 @@ ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
 echo "Installing libreoffice..."
 sudo apt install -y libreoffice
 
+# Install joplin
+echo "Installing Joplin..."
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+
+# Install pandoc
+echo "Installing pandoc..."
+sudo apt install -y pandoc
+
 #####
+
+## Image Tools ##
 
 # Install ImageMagick
 echo "Installing ImageMagick..."
 #sudo apt install -y imagemagick
 
-# File Manager (eg. pcmanfm, thunar, ranger)
-echo "Installing ranger filemanager..."
-#sudo apt install -y ranger
-
-# Install joplin
-echo "Installing Joplin..."
-
-# Install Virtualbox
-echo "Installing virtualbox..."
-
 # Install gimp
 echo "Installing gimp..."
 #sudo apt install -y gimp
 
+# Install inkscape
+echo "Installing inkscape..."
+#sudo apt install -y inkscape
+
+#####
+
+## File Management ##
+
+# File Manager (eg. pcmanfm, thunar, ranger)
+echo "Installing ranger filemanager..."
+#sudo apt install -y ranger
+
+# File Manager (eg. pcmanfm, thunar, ranger)
+echo "Installing pcmanfm filemanager..."
+#sudo apt install -y pcmanfm
+
+
+
+# Install Virtualbox
+echo "Installing virtualbox..."
+
 # Install flowblade (video)
 echo "Installing flowblade..."
 #sudo apt install -y flowblade
-
-# Install pandoc
-echo "Installing pandoc..."
-#sudo apt install -y pandoc
 
 # Install hledger
 echo "Installing hledger..."
