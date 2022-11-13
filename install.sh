@@ -160,7 +160,7 @@ TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages
 * Video tools: flowblade
 `
 
-## Network ##
+## Network Tools ##
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
@@ -172,7 +172,11 @@ sudo apt install -y nextcloud-desktop
 
 # Install wireguard
 echo "Installing wireguard..."
-#sudo apt install -y wireguard
+sudo apt install -y wireguard
+
+# Install neomutt
+echo "Installing neomutt..."
+sudo apt install -y neomutt
 
 #####
 
@@ -223,30 +227,36 @@ echo "Installing ranger filemanager..."
 echo "Installing pcmanfm filemanager..."
 #sudo apt install -y pcmanfm
 
+#####
 
+## Other Tools ##
 
 # Install Virtualbox
 echo "Installing virtualbox..."
-
-# Install flowblade (video)
-echo "Installing flowblade..."
-#sudo apt install -y flowblade
-
-# Install hledger
-echo "Installing hledger..."
-#sudo apt install -y hledger hledger-ui hledger-web
-
-# Install neomutt
-echo "Installing neomutt..."
-#sudo apt install -y neomutt
 
 # Install keepassxc
 echo "Installing KeePassXC..."
 #sudo apt install -y keepassxc
 
-# Install ffmpeg
-echo "Installing Audio Tools..." # vlc?? What music player and what video player
-#sudo apt install -y ffmpeg easytag audacity qmmp
+# Install hledger
+echo "Installing hledger..."
+#sudo apt install -y hledger hledger-ui hledger-web
+
+#####
+
+## Video Tools ##
+
+# Install flowblade (video)
+echo "Installing flowblade..."
+#sudo apt install -y flowblade
+
+#####
+
+## Audio Tools ##
+
+# Install ffmpeg, easytag, audacity, qmmp, cmus, lmms
+echo "Installing Audio Tools..."
+#sudo apt install -y ffmpeg easytag audacity qmmp cmus lmms
 
 } # End Tools Stuff
 
