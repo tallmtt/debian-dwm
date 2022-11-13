@@ -63,7 +63,7 @@ echo "Installing exa..."
 sudo apt install -y exa
 
 echo "Installing Display Manager..."
-sudo apt install lightdm
+sudo apt install -y lightdm
 
 } # End base stuff
 
@@ -108,7 +108,7 @@ cd suckless/dwm-6.3
 
 # Install suckless dmenu - dynamic manu
 cd ../dmenu-5.2
-#sudo make clean install
+sudo make clean install
 
 # Install suckless slstatus
 cd ../slstatus
@@ -117,11 +117,6 @@ cd ../slstatus
 # Install suckless st - simple terminal
 cd ../st-0.8.5
 #sudo make clean install
-
-####
-## Eveything so far above works!!!
-## Not compiling to avoid excess use
-####
 
 ## XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
