@@ -265,6 +265,8 @@ python3 -m pipx ensurepath
 python3 -m pipx install pywal
 python3 -m pipx install lektor
 python3 -m pipx install notebook
+## For emacs
+python3 -m pip install grip
 
 } # End Tools Stuff
 
