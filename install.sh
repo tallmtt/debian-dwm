@@ -6,21 +6,11 @@
 ### Might need: $ TERM=ansi whiptail --title "Welcome Message" --infobox "Howdy, Welcome to OSTechnix.." 8 78
 ## Bash scripting help: https://linuxize.com/post/bash-functions/
 ## DE + lightdm (dwm, cinammon, etc)
-## Editing (gimp, audacity, video: flowblade, libreoffice, emacs)
 ## Intel vs AMD??
-## Internet (Firefox, IRC, Thunderbird, etc)
-## Virtualizing? (virtualbox)
 # - [ ] dwm needs to make virtualbox float
 ## Entertainment (vlc, mpd, mpc)
-## python stuff (pywal, jupyter, lektor, django, pip/pipx)
-## Other (keepassxc, nextcloud-desktop, joplin, chess)
 
 clear
-
-## Define all functions first
-#hello_world () {
-#    echo 'Hello World!'
-#}
 
 ## Functions after Proceeding: choose what to install (y/n)
 base_stuff () {
@@ -109,19 +99,19 @@ sudo cp -v ~/.local/src/suckless/configs/lightdm-gtk-greeter.conf /etc/lightdm/
 
 ## Install suckless dwm - dynamic window manager
 cd suckless/dwm-6.3
-#sudo make clean install
+sudo make clean install
 
 # Install suckless dmenu - dynamic manu
 cd ../dmenu-5.2
-#sudo make clean install
+sudo make clean install
 
 # Install suckless slstatus
 cd ../slstatus
-#sudo make clean install
+sudo make clean install
 
 # Install suckless st - simple terminal
 cd ../st-0.8.5
-#sudo make clean install
+sudo make clean install
 
 ## XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
@@ -198,7 +188,7 @@ sudo apt install -y libreoffice
 
 # Install joplin
 echo "Installing Joplin..."
-#wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 
 # Install pandoc
 echo "Installing pandoc..."
@@ -270,11 +260,11 @@ sudo apt install -y ffmpeg easytag audacity qmmp cmus lmms
 # Install Python Stuff
 echo "Installing Python Stuff (lektor, jupyter, pywal)..."
 sudo apt install -y python3-pip python3-venv
-#python3 -m pip install --user pipx
-#python3 -m pipx ensurepath
-#python3 -m pipx install pywal
-#python3 -m pipx install lektor
-#python3 -m pipx install notebook
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+python3 -m pipx install pywal
+python3 -m pipx install lektor
+python3 -m pipx install notebook
 
 } # End Tools Stuff
 
@@ -287,13 +277,14 @@ TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up 
 
 if [[ $? -eq 0 ]]; then
     ## get ssh keys for suckless git
-#    gpg git.tgz.gpg
-#    tar zxvf git.tgz
-#    cp -vi git/vh* ~/.ssh/
-#    rm -r git.tgz git
-#    base_stuff ## Calling the Base Stuff Install function
+    gpg git.tgz.gpg
+    tar zxvf git.tgz
+    cp -vi git/vh* ~/.ssh/
+    rm -r git.tgz git
+
+    base_stuff ## Calling the Base Stuff Install function
     suckless_stuff  ## Install Suckless
-#    tool_stuff ## Install Tools
+    tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
