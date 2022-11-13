@@ -185,7 +185,7 @@ sudo apt install -y neomutt
 # Install emacs
 echo "Installing emacs..."
 sudo apt install -y emacs
-#ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
+ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
 
 # Install LibreOffice
 echo "Installing libreoffice..."
@@ -193,7 +193,7 @@ sudo apt install -y libreoffice
 
 # Install joplin
 echo "Installing Joplin..."
-#wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 
 # Install pandoc
 echo "Installing pandoc..."
@@ -259,6 +259,18 @@ sudo apt install -y flowblade
 echo "Installing Audio Tools..."
 sudo apt install -y ffmpeg easytag audacity qmmp cmus lmms
 
+#####
+
+## Python Stuff ##
+# Install Python Stuff
+echo "Installing Python Stuff (lektor, jupyter, pywal)..."
+sudo apt install -y python3-pip python3-venv
+python3 -m pip install --user pipx
+pipx ensurepath
+pipx install pywal
+pipx install lektor
+pipx install notebook
+
 } # End Tools Stuff
 
 
@@ -269,40 +281,19 @@ sudo apt install -y ffmpeg easytag audacity qmmp cmus lmms
 TERM=ansi whiptail --title "Minimal Debian: Post Install" --yesno "Let's set up your new Debian environment! Proceed?" 8 78
 
 if [[ $? -eq 0 ]]; then
+    ## get ssh keys for suckless git
 #    gpg git.tgz.gpg
 #    tar zxvf git.tgz
 #    cp -vi git/vh* ~/.ssh/
 #    rm -r git.tgz git
 #    base_stuff ## Calling the Base Stuff Install function
-    #    suckless_stuff  ## Install Suckless
-    ##
-    ## Working on Tools Stuff now
-    ##
+#    suckless_stuff  ## Install Suckless
     tool_stuff ## Install Tools
 elif [[ $? -eq 1 ]]; then
   whiptail --title "MESSAGE" --msgbox "Cancelling Process since user pressed <NO>." 8 78 
 elif [[ $? -eq 255 ]]; then
   whiptail --title "MESSAGE" --msgbox "User pressed ESC. Exiting the script" 8 78 
 fi
-
-# hello_world # Test calling bash function
-
-# Install 
-#echo "Installing ..."
-#sudo apt install -y
-
-# Install 
-#echo "Installing ..."
-#sudo apt install -y
-
-# Install Python Stuff
-#echo "Installing Python Stuff (lektor, jupyter, pywal)..."
-#sudo apt install -y python3-pip python3-venv
-#python3 -m pip install --user pipx
-#pipx ensurepath
-#pipx install pywal
-#pipx install lektor
-#pipx install notebook
 
 echo "Cleaning up..."
 sudo apt autoremove
