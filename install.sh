@@ -148,8 +148,16 @@ sudo cp ~/.local/src/suckless/configs/dwm.desktop /usr/share/xsessions
 
 tool_stuff () {
 
-TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - File Management: PCmanFM, ranger \n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Video tools: flowblade \n - Image tools: gimp, inkscape, imagemagick \n - Document tools: emacs, libreoffice \n - Other: hledger, virtualbox \n
- \n" 30 78
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - File Management: PCmanFM, ranger \n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Video tools: flowblade \n - Image tools: gimp, inkscape, imagemagick \n - Document tools: emacs, libreoffice \n - Other: hledger, virtualbox \n" 30 78
+
+# File Management: PCmanFM, ranger
+# Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms
+# Video tools: flowblade
+# Image tools: gimp, inkscape, imagemagick
+# Document tools: emacs, libreoffice
+# Network: Firefox, Nextcloud
+# Other: hledger, virtualbox \n
+
 
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
