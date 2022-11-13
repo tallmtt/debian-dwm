@@ -148,7 +148,7 @@ sudo cp ~/.local/src/suckless/configs/dwm.desktop /usr/share/xsessions
 
 tool_stuff () {
 
-TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - File Management: PCmanFM, ranger \n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Video tools: flowblade \n - Image tools: gimp, inkscape, imagemagick \n - Document tools: emacs, libreoffice \n - Other: hledger, virtualbox \n" 30 78
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n --List of tools... \n" 30 78
 
 : `
 * Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms
@@ -160,18 +160,34 @@ TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages
 * Video tools: flowblade
 `
 
+## Network ##
+
 # Browser Installation (eg. chromium, firefox-esr)
 echo "Installing firefox..."
-#sudo apt install -y firefox-esr
+sudo apt install -y firefox-esr
 
-# Install emacs
-echo "Installing emacs..."
-#sudo apt install -y emacs
-#ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
+# Install Nextcloud Desktop
+echo "Installing Nextcloud Desktop..."
+sudo apt install -y nextcloud-desktop
 
 # Install wireguard
 echo "Installing wireguard..."
 #sudo apt install -y wireguard
+
+#####
+
+## Document Tools ##
+
+# Install emacs
+echo "Installing emacs..."
+sudo apt install -y emacs
+ln -s ~/.local/src/suckless/configs/emacs-config ~/.emacs
+
+# Install LibreOffice
+echo "Installing libreoffice..."
+sudo apt install -y libreoffice
+
+#####
 
 # Install ImageMagick
 echo "Installing ImageMagick..."
@@ -199,10 +215,6 @@ echo "Installing flowblade..."
 echo "Installing pandoc..."
 #sudo apt install -y pandoc
 
-# Install LibreOffice
-echo "Installing libreoffice..."
-#sudo apt install -y libreoffice
-
 # Install hledger
 echo "Installing hledger..."
 #sudo apt install -y hledger hledger-ui hledger-web
@@ -214,10 +226,6 @@ echo "Installing neomutt..."
 # Install keepassxc
 echo "Installing KeePassXC..."
 #sudo apt install -y keepassxc
-
-# Install Nextcloud Desktop
-echo "Installing Nextcloud Desktop..."
-#sudo apt install -y nextcloud-desktop
 
 # Install ffmpeg
 echo "Installing Audio Tools..." # vlc?? What music player and what video player
