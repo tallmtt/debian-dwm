@@ -143,7 +143,7 @@ sudo cp ~/.local/src/suckless/configs/dwm.desktop /usr/share/xsessions
 
 tool_stuff () {
 
-TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Document tools: emacs, libreoffice, joplin, pandoc \n - File Management: PCmanFM, ranger \n - Image tools: gimp, inkscape, imagemagick \n - Network: Firefox, Nextcloud, Wireguard, Neomutt \n - Other: hledger, virtualbox, keepassxc \n - Video tools: flowblade \n" 30 78
+TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages of tools...\n - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n - Document tools: emacs, libreoffice, joplin, pandoc \n - File Management: PCmanFM, ranger \n - Image tools: gimp, inkscape, imagemagick \n - Network: Firefox, Nextcloud, Wireguard, Neomutt \n - Other: hledger, virtualbox, keepassxc \n - Video tools: vlc, flowblade \n" 30 78
 
 : `
 - Audio tools: ffmpeg, easytag, audacity, qmmp, cmus, lmms \n
@@ -152,7 +152,7 @@ TERM=ansi whiptail --title "Installing Tool Stuff" --msgbox "Installing packages
 - Image tools: gimp, inkscape, imagemagick \n
 - Network: Firefox, Nextcloud, Wireguard, Neomutt \n
 - Other: hledger, virtualbox, keepassxc \n
-- Video tools: flowblade \n
+- Video tools: vlc, flowblade \n
 `
 
 ## Network Tools ##
@@ -245,6 +245,10 @@ sudo apt install -y hledger hledger-ui hledger-web
 # Install flowblade (video)
 echo "Installing flowblade..."
 sudo apt install -y flowblade
+
+# Install vlc (to play videos)
+echo "Installing vlc..."
+sudo apt install -y vlc
 
 #####
 
