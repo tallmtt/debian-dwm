@@ -55,6 +55,10 @@ sudo apt install -y exa
 echo "Installing Display Manager..."
 sudo apt install -y lightdm
 
+echo "Installing for laptop brightness..."
+sudo apt install -y brightnessctl acpi
+#sudo usermod -a -G video ${USER}
+
 } # End base stuff
 
 
@@ -112,6 +116,12 @@ sudo make clean install
 # Install suckless st - simple terminal
 cd ../st-0.8.5
 sudo make clean install
+
+# Install suckless nsxiv - image viewer
+cd ../nsxiv
+sudo apt install libimlib2-dev libexif-dev
+make
+sudo make install
 
 ## XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
