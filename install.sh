@@ -118,6 +118,7 @@ cd ../st-0.8.5
 sudo make clean install
 
 # Install suckless nsxiv - image viewer
+# https://codeberg.org/nsxiv/nsxiv.git
 cd ../nsxiv
 sudo apt install libimlib2-dev libexif-dev
 make
@@ -231,6 +232,10 @@ sudo apt install -y ranger
 # File Manager (eg. pcmanfm, thunar, ranger)
 echo "Installing pcmanfm filemanager..."
 sudo apt install -y pcmanfm
+
+# File Manager (eg. pcmanfm, thunar, ranger)
+echo "Installing midnight commander filemanager..."
+sudo apt install -y mc
 
 #####
 
