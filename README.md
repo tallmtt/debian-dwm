@@ -1,5 +1,12 @@
 # Matt's new rice void (Built upon Randi's)
 
+## Todo
+
+- [ ] Mutt wizard
+  - https://github.com/LukeSmithxyz/mutt-wizard
+
+---
+
 NOTE: This is in progress - use at your own risk!
 
 Setup my default install (practice on virtualbox)
